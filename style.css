@@ -3,19 +3,16 @@
     margin: 50px;
 }
 
-.container {
+.main-container {
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 
 }
 
-.row {
-    background-color: green;
-}
 
-.hour {
+.col-2 {
     border-style: solid ;
 }
 
