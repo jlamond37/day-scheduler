@@ -36,22 +36,25 @@ rowsList.forEach(function(row){
 
 
 displayTime();
-hourTime();
 
 
-// var saveText = localStorage.getItem('saveText');
 
-// if (saveText === null) {
-//   saveText = 0;
-// }
+var saveText = localStorage.getItem('saveText');
+
+if (saveText === null) {
+  saveText = 0;
+}
 
 // tasks.textContent = saveText;
+console.log(saveText);
 
-// save.addEventListener('click', function () 
-// {
-//   tasks.textContent = saveText;
-//   localStorage.setItem('saveText', 'saveText');
-// });
+save.addEventListener('click', function (event)
+{
+  // tasks.textContent = saveText;
+  event.preventDefault();
+  localStorage.setItem('saveText', JSON.stringify(saveText));
+  
+});
 
 
 
