@@ -1,0 +1,29 @@
+.page-header {
+    text-align: center;
+    margin: 50px;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.row {
+    background-color: green;
+}
+
+.hour {
+    border-style: solid ;
+}
+
+.tasks {
+    border-style: solid;
+}
+
+.save {
+    border-style: solid;
+}
+
