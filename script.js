@@ -5,8 +5,18 @@ var hourRows = []
 var hour = moment().format("HH");
 var rightNow;
 var rowsList = document.querySelectorAll(".row");
+var save = document.querySelectorAll(".save");
+var tasks = document.querySelectorAll(".tasks");
 // console.log(rowsList);
-console.log(hour)
+
+
+
+function displayTime() {
+    rightNow = moment().format('MMM DD, YYYY');
+    timeDisplayEl.text(rightNow);
+  }
+
+
 rowsList.forEach(function(row){
   var rowEl = row.children[0];
   // console.log(rowEl.parentElement);
@@ -24,28 +34,25 @@ rowsList.forEach(function(row){
   }
 })
 
-function displayTime() {
-    rightNow = moment().format('MMM DD, YYYY');
-    timeDisplayEl.text(rightNow);
-  }
 
-function hourTime() {
-    var hourlyTime = moment().format('HH');
-    // if (rightNow.isAfter(moment('10:00', "HH:mm"))){
-    //   return rowEl.setAttribute('style','background-color:grey');
-    // }
-}
+displayTime();
+hourTime();
 
 
+// var saveText = localStorage.getItem('saveText');
 
+// if (saveText === null) {
+//   saveText = 0;
+// }
 
+// tasks.textContent = saveText;
 
-
-
-
-
+// save.addEventListener('click', function () 
+// {
+//   tasks.textContent = saveText;
+//   localStorage.setItem('saveText', 'saveText');
+// });
 
 
 
-  displayTime();
-  hourTime();
+
